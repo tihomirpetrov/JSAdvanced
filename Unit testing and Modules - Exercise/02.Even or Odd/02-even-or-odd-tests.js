@@ -1,5 +1,18 @@
 const isOddOrEven = require('./02-even-or-odd');
 
+function isOddOrEven(string) {
+    if (typeof(string) !== 'string') {
+        return undefined;
+    }
+    if (string.length % 2 === 0) {
+        return 'even';
+    }
+
+    return 'odd';
+}
+
+module.exports = isOddOrEven;
+
 const assert = require('chai').assert;
 
 describe('isOddOrEven Tests', function () {
